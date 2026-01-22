@@ -11,10 +11,17 @@ index=firewall_logs dest_port=22
 
 # Penjelasan :
 index=firewall_logs dest_port=22  : Ambil log firewall yang menuju port SSH (22)
+<img width="1351" height="691" alt="Splunk day 1" src="https://github.com/user-attachments/assets/fda54e6e-9fc8-4f16-bc87-6b023bfd614d" />
+
 
 | stats count by src_ip, action : Hitung berapa kali IP muncul  Pisahkan berdasarkan ALLOW / DENY
+<img width="1356" height="722" alt="Splunk day 1 1" src="https://github.com/user-attachments/assets/29b74658-4f1c-4ba9-b3e7-75adf9318804" />
+
+
 
 | sort -count : IP paling sering muncul ditaruh di atas Ini cara SOC menemukan penyerang cepat
+<img width="713" height="244" alt="splunk daY 1 1 1" src="https://github.com/user-attachments/assets/822c46a5-c5b6-43c5-8494-6c0f8d55c07d" />
+
 
 
 # ATOMIC DOCUMENTATION
